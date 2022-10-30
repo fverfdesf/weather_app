@@ -1,8 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import WeatherApp from "./WeatherApp";
-
 import "./styles.css";
+import * as serviceWorker from "./serviceWorker";
 
 function App() {
   return <WeatherApp />;
@@ -13,3 +13,5 @@ try {
 } catch (e) {
   console.log("error", e);
 }
+
+serviceWorker.register();
